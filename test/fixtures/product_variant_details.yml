@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_variant: one
+  name: MyString
+  detail: MyText
+
+two:
+  product_variant: two
+  name: MyString
+  detail: MyText

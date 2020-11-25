@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "a201a634-d19e-4b5a-9c80-fb633e6aa987",
+		"name": "RUBY",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "STORES",
+			"item": [
+				{
+					"name": "GET STORES",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/stores",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE STORE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.oT7kSePnYs7eVIsRIzIi0UEC7XBclsrO3qrnXwic8Zg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Store Nuel\",\n    \"rating\": 1,\n    \"address\": \"Surabaya\",\n    \"phone\": 123\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/stores",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE STORE",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\": 1,\n    \"name\": \"Store 2\",\n    \"rating\": 0,\n    \"address\": \"Surabaya\",\n    \"phone\": 123\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/stores/2",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"stores",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE STORE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/stores/2",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"stores",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE PRODUCT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store_id\": 1,\n    \"category_id\": 1,\n    \"product_name\": \"product 1 dari store 1\",\n    \"description\": \"\",\n    \"weight\": 10,\n    \"condition\": \"new\",\n    \"is_insurance\": true,\n    \"price\": 10000,\n    \"stock\": 10,\n    \"is_available\": true,\n    \"variant_type_details\": [\n        {\n            \"variant_type_id\": 1,\n            \"variant_type_name\": \"blue\",\n            \"variant_type_desc\": \"\"\n        },\n                {\n            \"variant_type_id\": 1,\n            \"variant_type_name\": \"red\",\n            \"variant_type_desc\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/products",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "PRODUCTS",
+			"item": [
+				{
+					"name": "GET PRODUCTS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/products",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE PRODUCT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store_id\": 1,\n    \"category_id\": 1,\n    \"product_name\": \"product 4 dari store 1\",\n    \"description\": \"\",\n    \"weight\": 10,\n    \"condition\": \"new\",\n    \"is_insurance\": true,\n    \"price\": 10000,\n    \"stock\": 10,\n    \"is_available\": true,\n    \"variant_type_details\": [\n        {\n            \"variant_type_id\": 1,\n            \"variant_type_name\": \"black\",\n            \"variant_type_desc\": \"\"\n        },\n                {\n            \"variant_type_id\": 1,\n            \"variant_type_name\": \"white\",\n            \"variant_type_desc\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/products/4",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE PRODUCT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store_id\": 1,\n    \"category_id\": 1,\n    \"product_name\": \"product 4 dari store 1\",\n    \"description\": \"\",\n    \"weight\": 10,\n    \"condition\": \"new\",\n    \"is_insurance\": true,\n    \"price\": 10000,\n    \"stock\": 10,\n    \"is_available\": true,\n    \"variant_type_details\": [\n        {\n            \"product_variant_id\": 7,\n            \"product_variant_name\": \"red pinm\",\n            \"product_variant_desc\": \"\"\n        },\n                {\n            \"product_variant_id\": 8,\n            \"product_variant_name\": \"blue pink\",\n            \"product_variant_desc\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/products/4",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE PRODUCT",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store_id\": 1,\n    \"category_id\": 1,\n    \"product_name\": \"product 4 dari store 1\",\n    \"description\": \"\",\n    \"weight\": 10,\n    \"condition\": \"new\",\n    \"is_insurance\": true,\n    \"price\": 10000,\n    \"stock\": 10,\n    \"is_available\": true,\n    \"variant_type_details\": [\n        {\n            \"product_variant_id\": 7,\n            \"product_variant_name\": \"red pinm\",\n            \"product_variant_desc\": \"\"\n        },\n                {\n            \"product_variant_id\": 8,\n            \"product_variant_name\": \"blue pink\",\n            \"product_variant_desc\": \"\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/products/3",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "CARTS",
+			"item": [
+				{
+					"name": "GET CARTS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.oT7kSePnYs7eVIsRIzIi0UEC7XBclsrO3qrnXwic8Zg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/v1/carts",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CREATE CARTS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_id\":1,\n    \"total_price\": 50000,\n    \"is_paid\": false,\n    \"cart_details\":[\n        {\n            \"store_id\": 1,\n            \"product_variant_detail_id\":8,\n            \"amount\": 2,\n            \"price\": 10000,\n            \"total_price\": 20000\n        },\n        {\n            \"store_id\": 1,\n            \"product_variant_detail_id\":8,\n            \"amount\": 3,\n            \"price\": 10000,\n            \"total_price\": 30000\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/carts",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"carts"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\" : \"admin@admin.com\",\n    \"password\": \"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"imanuel\",\n    \"email\" : \"imanuel@admin.com\",\n    \"password\": \"admin123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/v1/register",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
